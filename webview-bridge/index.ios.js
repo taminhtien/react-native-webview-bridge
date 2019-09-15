@@ -21,7 +21,7 @@ var createReactClass = require('create-react-class');
 var invariant = require('invariant');
 var keyMirror = require('keymirror');
 var resolveAssetSource = require('react-native/Libraries/Image/resolveAssetSource');
-
+var ReactNativeWebView = require("react-native-webview");
 var {
   ActivityIndicator,
   EdgeInsetsPropType,
@@ -29,13 +29,13 @@ var {
   Text,
   View,
   ViewPropTypes,
-  WebView,
   requireNativeComponent,
   UIManager,
   NativeModules: {
     WebViewBridgeManager,
   },
 } = ReactNative;
+var { WebView } = ReactNativeWebView;
 
 var BGWASH = 'rgba(255,255,255,0.8)';
 var RCT_WEBVIEWBRIDGE_REF = 'webviewbridge';
